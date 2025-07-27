@@ -148,6 +148,9 @@ jobs:
         if: env.turbo_cache_hit != 1 && steps.cocoapods-cache.outputs.cache-hit != 'true'
         run: |
           cd example
+          gem install bundler
+          bundle init || true
+          echo 'gem "cocoapods"' >> Gemfile
           bundle install
           bundle exec pod repo update --verbose
           bundle exec pod install --project-directory=ios

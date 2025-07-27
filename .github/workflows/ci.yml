@@ -149,10 +149,13 @@ jobs:
         run: |
           cd example
           gem install bundler
-          sed -i.bak '/gem ["'\'']cocoapods["'\'']/d' Gemfile
-          echo 'gem "cocoapods"' >> Gemfile
-
           rm -f Gemfile.lock
+
+          cat <<EOF > Gemfile
+          source "https://rubygems.org"
+          gem "cocoapods", ">= 1.13", "< 1.15"
+          EOF
+
           bundle install
           bundle exec pod repo update --verbose
           bundle exec pod install --project-directory=ios

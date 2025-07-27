@@ -4,7 +4,7 @@ import {
   getIcon,
   changeIcon,
   changeIconSilently,
-} from 'react-native-change-app-icon';
+} from '@linhlm23496/react-native-change-app-icon';
 import { useNavigation } from '@react-navigation/native';
 
 const HomeScreen: FC = () => {

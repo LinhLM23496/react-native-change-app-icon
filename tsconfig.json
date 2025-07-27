@@ -2,7 +2,7 @@
   "compilerOptions": {
     "rootDir": ".",
     "paths": {
-      "react-native-change-app-icon": ["./src/index"]
+      "@linhlm23496/react-native-change-app-icon": ["./src/index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,

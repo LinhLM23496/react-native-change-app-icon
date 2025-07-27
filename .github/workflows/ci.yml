@@ -140,6 +140,10 @@ jobs:
         with:
           xcode-version: ${{ env.XCODE_VERSION }}
 
+      - name: Install correct bundler version
+        if: env.turbo_cache_hit != 1
+        run: gem install bundler
+
       - name: Install cocoapods
         if: env.turbo_cache_hit != 1 && steps.cocoapods-cache.outputs.cache-hit != 'true'
         run: |

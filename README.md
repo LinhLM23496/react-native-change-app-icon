@@ -47,11 +47,11 @@ yarn add react-native-change-app-icon
 <dict>
   <key>CFBundleAlternateIcons</key>
   <dict>
-    <key>alternateIcon1</key>
+    <key>XSquare</key>
     <dict>
       <key>CFBundleIconFiles</key>
       <array>
-        <string>alternateIcon1</string>
+        <string>XSquare</string>
       </array>
     </dict>
   </dict>
@@ -97,13 +97,13 @@ end
 import ChangeAppIcon from 'react-native-change-app-icon';
 
 // ✅ Change to alternate icon
-await ChangeAppIcon.changeIcon('alternateIcon1');
+await ChangeAppIcon.changeIcon('XSquare');
 
 // 🔁 Get current icon
 await ChangeAppIcon.getIcon();
 
 // 🤫 iOS only: silently change icon (if enabled)
-await ChangeAppIcon.changeIconSilently('alternateIcon1');
+await ChangeAppIcon.changeIconSilently('XSquare');
 ```
 
 ---
@@ -113,6 +113,104 @@ await ChangeAppIcon.changeIconSilently('alternateIcon1');
 - `changeIconSilently` is available **only if** you compile with `ENABLE_SILENT_ICON_CHANGE` flag.
 - iOS will prompt the user for permission when using the default `changeIcon()`.
 - Android support depends on the launcher (e.g. works on Samsung OneUI, Pixel, etc.).
+
+---
+
+## ⚙️ Android Setup
+
+### 🏗️ Manifest Setup
+
+To support dynamic icon changes on Android, you'll need to define **activity aliases** in your `AndroidManifest.xml`.
+
+Each icon variant should be declared using `<activity-alias>` that points to a common `MainActivity`. One alias must have `android:name=".Default"` — this is required as the fallback/default icon.
+
+#### ✅ Example:
+
+```xml
+<activity
+  android:name=".MainActivity"
+  android:enabled="false"
+  android:exported="true" >
+  <intent-filter>
+    <action android:name="android.intent.action.MAIN" />
+    <category android:name="android.intent.category.LAUNCHER" />
+  </intent-filter>
+</activity-alias>
+
+<!-- Default icon alias (required) -->
+<activity-alias
+  android:name=".Default"
+  android:enabled="false"
+  android:exported="true"
+  android:icon="@mipmap/ic_launcher_default"
+  android:targetActivity=".MainActivity">
+  <intent-filter>
+    <action android:name="android.intent.action.MAIN" />
+    <category android:name="android.intent.category.LAUNCHER" />
+  </intent-filter>
+</activity-alias>
+
+<!-- Alternate icon alias -->
+<activity-alias
+  android:name=".XSquare"
+  android:enabled="false"
+  android:exported="true"
+  android:icon="@mipmap/ic_launcher_xsquare"
+  android:targetActivity=".MainActivity" />
+```
+
+- Only **one alias can be enabled** at a time.
+- You can name aliases whatever you want (e.g., `.Holiday2024`, `.IconB`) — but `.Default` **must exist**.
+
+---
+
+### 🚦 Android Icon Change Flow
+
+```mermaid
+graph TD
+  A[App first install] --> B[MainActivity is default launcher]
+  B --> C{User calls getIcon()}
+  C -->|No alias enabled| D[Return "MainActivity"]
+  D --> E{User calls changeIcon("XSquare")}
+  E --> F[Enable XSquare]
+  F --> G[App goes background]
+  G --> H[Disable MainActivity alias, exitProcess(0)]
+  H --> I[App restarts with XSquare]
+
+  I --> J{User changes again}
+  J --> K[Alias changes immediately]
+```
+
+---
+
+### ✅ Behavior Summary
+
+- 🆕 **First Install**:
+  - `MainActivity` is the only active launcher.
+  - All aliases are disabled (`enabled="false"`).
+  - `getIcon()` will return `"MainActivity"`.
+
+- 🔁 **First `changeIcon(...)` call**:
+  - Enables selected alias.
+  - App is sent to background.
+  - On `onActivityPaused()`, `MainActivity` is disabled and app is restarted.
+
+- ⚡ **Subsequent icon changes**:
+  - Icon switches immediately.
+  - No restart is required.
+  - Only declared aliases can be used.
+
+### 🚀 Silent vs Normal Icon Change (Android)
+
+> On Android, `changeIconSilently()` behaves exactly like `changeIcon()`. There is **no functional difference**. It's only separated to match the iOS API.
+
+---
+
+### 🧠 Notes
+
+- Aliases must be declared **statically** in the `AndroidManifest.xml`. You cannot create them dynamically at runtime.
+- Icon switching only works on launchers that support alias-based switching (e.g., Pixel Launcher, Samsung OneUI, etc.).
+- Some OEM launchers (e.g., older Chinese brands) may not respect the alias change.
 
 ---
 

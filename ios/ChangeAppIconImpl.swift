@@ -36,6 +36,11 @@ import UIKit
             print("ℹ️ No need to change icon. Already using the desired icon.")
             return
         }
+      
+        if UIApplication.shared.supportsAlternateIcons {
+            print("✅ Supported alternate icons: \(UIApplication.shared.alternateIconName ?? "Default")")
+        }
+
 
         DispatchQueue.main.async {
             UIApplication.shared.setAlternateIconName(iconName) { error in
@@ -45,6 +50,10 @@ import UIKit
                     print("✅ Icon changed to \(iconName ?? "Default")")
                 }
             }
+        }
+      
+        if UIApplication.shared.supportsAlternateIcons {
+            print("✅ Supported alternate icons after: \(UIApplication.shared.alternateIconName ?? "Default")")
         }
     }
 
@@ -86,7 +95,8 @@ import UIKit
   
     #else
     @objc public func changeIconSilently(to iconName: String?) {
-      NSException(name: .genericException, reason: "Silent icon change is not enabled in this build.", userInfo: nil).raise()    }
+      print("❌ Silent icon change is not enabled in this build.")
+    }
     #endif
 
     // MARK: - 4. Check: supports alternate icon (iOS 10.3+)

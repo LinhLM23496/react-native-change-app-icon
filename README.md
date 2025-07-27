@@ -1,4 +1,4 @@
-# react-native-change-app-icon
+# @linhlm23496/react-native-change-app-icon
 
 A React Native library that allows you to **dynamically change your app icon** at runtime — supporting both **iOS** and **Android**.
 
@@ -27,13 +27,13 @@ A React Native library that allows you to **dynamically change your app icon** a
 ## 📦 Installation
 
 ```bash
-npm install react-native-change-app-icon
+npm install @linhlm23496/react-native-change-app-icon
 ```
 
 or
 
 ```bash
-yarn add react-native-change-app-icon
+yarn add @linhlm23496/react-native-change-app-icon
 ```
 
 ---
@@ -94,7 +94,7 @@ end
 ## 🧪 Usage
 
 ```ts
-import ChangeAppIcon from 'react-native-change-app-icon';
+import ChangeAppIcon from '@linhlm23496/react-native-change-app-icon';
 
 // ✅ Change to alternate icon
 await ChangeAppIcon.changeIcon('XSquare');

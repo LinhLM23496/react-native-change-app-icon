@@ -1,5 +1,5 @@
 {
-  "name": "react-native-change-app-icon",
+  "name": "@linhlm23496/react-native-change-app-icon",
   "version": "0.1.0",
   "description": "A React Native library that allows you to programmatically change your app icon on both iOS and Android.",
   "main": "./lib/module/index.js",

@@ -1,6 +1,6 @@
 PODS:
   - boost (1.84.0)
-  - ChangeAppIcon (1.0.0):
+  - ChangeAppIcon (1.0.1):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -2039,7 +2039,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   boost: 7e761d76ca2ce687f7cc98e698152abd03a18f90
-  ChangeAppIcon: 1d52d5dc9bc035bf8baff984f3e028509bf456e4
+  ChangeAppIcon: e9d2c4b6f26e66cc0bef3587a0d12f2b7ffca3b9
   DoubleConversion: cb417026b2400c8f53ae97020b2be961b59470cb
   fast_float: 06eeec4fe712a76acc9376682e4808b05ce978b6
   FBLazyVector: 84b955f7b4da8b895faf5946f73748267347c975
@@ -2113,6 +2113,6 @@ SPEC CHECKSUMS:
   SocketRocket: d4aabe649be1e368d1318fdf28a022d714d65748
   Yoga: c758bfb934100bb4bf9cbaccb52557cee35e8bdf
 
-PODFILE CHECKSUM: b909e373e61f866153af72e0728d2f6a17b8e671
+PODFILE CHECKSUM: bbb66c6e68e8faa2d21101077fbf192263355a4a
 
 COCOAPODS: 1.16.2

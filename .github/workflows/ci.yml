@@ -149,10 +149,10 @@ jobs:
         run: |
           cd example
           gem install bundler
-          bundle init || true
-          if ! grep -q "gem \"cocoapods\"" Gemfile; then
-            echo 'gem "cocoapods"' >> Gemfile
-          fi
+          sed -i.bak '/gem ["'\'']cocoapods["'\'']/d' Gemfile
+          echo 'gem "cocoapods"' >> Gemfile
+
+          rm -f Gemfile.lock
           bundle install
           bundle exec pod repo update --verbose
           bundle exec pod install --project-directory=ios

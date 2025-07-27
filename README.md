@@ -167,7 +167,9 @@ Each icon variant should be declared using `<activity-alias>` that points to a c
 
 ### 🚦 Android Icon Change Flow
 
-![App icon flow](docs/images/flow-change-icon-android.png)
+![App icon flow](
+
+> 🎬 Demo: [IMAGE](https://s3.tebi.io/doctruyen/flow-change-icon-android.png))
 
 ---
 

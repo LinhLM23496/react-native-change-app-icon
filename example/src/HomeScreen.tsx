@@ -40,26 +40,26 @@ const HomeScreen: FC = () => {
     <View style={styles.container}>
       <Text style={styles.text}>{currentIcon}</Text>
       <Button title="Get current Icon" onPress={onGetIcon} />
-      <Button title="Change Icon AppIcon" onPress={() => onChangeIcon()} />
+      <Button title="Change Icon Default" onPress={() => onChangeIcon()} />
       <Button
-        title="Change Icon Custom2"
-        onPress={() => onChangeIcon('Custom2')}
+        title="Change Icon XSquare"
+        onPress={() => onChangeIcon('XSquare')}
       />
       <Button
-        title="Change Icon Custom3"
-        onPress={() => onChangeIcon('Custom3')}
+        title="Change Icon PlusSquare"
+        onPress={() => onChangeIcon('PlusSquare')}
       />
       <Button
-        title="Change Icon Silent AppIcon"
+        title="Change Icon Silent Default"
         onPress={() => onChangeIconSilent()}
       />
       <Button
-        title="Change Icon Silent Custom2"
-        onPress={() => onChangeIconSilent('Custom2')}
+        title="Change Icon Silent XSquare"
+        onPress={() => onChangeIconSilent('XSquare')}
       />
       <Button
-        title="Change Icon Silent Custom3"
-        onPress={() => onChangeIconSilent('Custom3')}
+        title="Change Icon Silent PlusSquare"
+        onPress={() => onChangeIconSilent('PlusSquare')}
       />
       <Button title="Change Icon Any" onPress={() => onChangeIcon('Any')} />
       <Button

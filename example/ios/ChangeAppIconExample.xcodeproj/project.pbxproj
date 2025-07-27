@@ -8,23 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
-		39867B6C1D1F5BEEA76315B9 /* libPods-ChangeAppIconExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F4620A9B8E408809897A2B1 /* libPods-ChangeAppIconExample.a */; };
+		28B82FCF11C2F215392A4AFE /* libPods-ChangeAppIconExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BF4F75CB28A6E6381CA1CE9 /* libPods-ChangeAppIconExample.a */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		AE4633A9BC2108F3B570A70A /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0BF4F75CB28A6E6381CA1CE9 /* libPods-ChangeAppIconExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChangeAppIconExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07F961A680F5B00A75B9A /* ChangeAppIconExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChangeAppIconExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ChangeAppIconExample/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ChangeAppIconExample/Info.plist; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = ChangeAppIconExample/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		6F4620A9B8E408809897A2B1 /* libPods-ChangeAppIconExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChangeAppIconExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ChangeAppIconExample/AppDelegate.swift; sourceTree = "<group>"; };
-		80E53E7CAB980056F984AAB0 /* Pods-ChangeAppIconExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChangeAppIconExample.release.xcconfig"; path = "Target Support Files/Pods-ChangeAppIconExample/Pods-ChangeAppIconExample.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ChangeAppIconExample/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		E4DABC1DC7D92168879D6C76 /* Pods-ChangeAppIconExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChangeAppIconExample.debug.xcconfig"; path = "Target Support Files/Pods-ChangeAppIconExample/Pods-ChangeAppIconExample.debug.xcconfig"; sourceTree = "<group>"; };
+		899F2816DBC0174D3D30CA3F /* Pods-ChangeAppIconExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChangeAppIconExample.release.xcconfig"; path = "Target Support Files/Pods-ChangeAppIconExample/Pods-ChangeAppIconExample.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F617003CBDB1569C3DEC9DDC /* Pods-ChangeAppIconExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChangeAppIconExample.debug.xcconfig"; path = "Target Support Files/Pods-ChangeAppIconExample/Pods-ChangeAppIconExample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,7 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39867B6C1D1F5BEEA76315B9 /* libPods-ChangeAppIconExample.a in Frameworks */,
+				28B82FCF11C2F215392A4AFE /* libPods-ChangeAppIconExample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,7 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				6F4620A9B8E408809897A2B1 /* libPods-ChangeAppIconExample.a */,
+				0BF4F75CB28A6E6381CA1CE9 /* libPods-ChangeAppIconExample.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -92,8 +92,8 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E4DABC1DC7D92168879D6C76 /* Pods-ChangeAppIconExample.debug.xcconfig */,
-				80E53E7CAB980056F984AAB0 /* Pods-ChangeAppIconExample.release.xcconfig */,
+				F617003CBDB1569C3DEC9DDC /* Pods-ChangeAppIconExample.debug.xcconfig */,
+				899F2816DBC0174D3D30CA3F /* Pods-ChangeAppIconExample.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -105,13 +105,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "ChangeAppIconExample" */;
 			buildPhases = (
-				19A3FE5761380B80931D736E /* [CP] Check Pods Manifest.lock */,
+				45E8BCA060D65F31B797323D /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				DC772627F732520C380DEB16 /* [CP] Embed Pods Frameworks */,
-				883CDE4BFCDB88F2B1639414 /* [CP] Copy Pods Resources */,
+				B17E74621ACA96429B9C1763 /* [CP] Embed Pods Frameworks */,
+				357986C20D803576ECEE515E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -183,7 +183,24 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"$REACT_NATIVE_PATH/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"$REACT_NATIVE_PATH/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		19A3FE5761380B80931D736E /* [CP] Check Pods Manifest.lock */ = {
+		357986C20D803576ECEE515E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChangeAppIconExample/Pods-ChangeAppIconExample-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChangeAppIconExample/Pods-ChangeAppIconExample-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChangeAppIconExample/Pods-ChangeAppIconExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		45E8BCA060D65F31B797323D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -205,24 +222,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		883CDE4BFCDB88F2B1639414 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ChangeAppIconExample/Pods-ChangeAppIconExample-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ChangeAppIconExample/Pods-ChangeAppIconExample-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChangeAppIconExample/Pods-ChangeAppIconExample-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DC772627F732520C380DEB16 /* [CP] Embed Pods Frameworks */ = {
+		B17E74621ACA96429B9C1763 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -255,9 +255,9 @@
 /* Begin XCBuildConfiguration section */
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E4DABC1DC7D92168879D6C76 /* Pods-ChangeAppIconExample.debug.xcconfig */;
+			baseConfigurationReference = F617003CBDB1569C3DEC9DDC /* Pods-ChangeAppIconExample.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = Default;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -290,9 +290,9 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 80E53E7CAB980056F984AAB0 /* Pods-ChangeAppIconExample.release.xcconfig */;
+			baseConfigurationReference = 899F2816DBC0174D3D30CA3F /* Pods-ChangeAppIconExample.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = Default;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;

@@ -47,11 +47,11 @@ yarn add react-native-change-app-icon
 <dict>
   <key>CFBundleAlternateIcons</key>
   <dict>
-    <key>alternateIcon1</key>
+    <key>XSquare</key>
     <dict>
       <key>CFBundleIconFiles</key>
       <array>
-        <string>alternateIcon1</string>
+        <string>XSquare</string>
       </array>
     </dict>
   </dict>
@@ -97,13 +97,13 @@ end
 import ChangeAppIcon from 'react-native-change-app-icon';
 
 // ✅ Change to alternate icon
-await ChangeAppIcon.changeIcon('alternateIcon1');
+await ChangeAppIcon.changeIcon('XSquare');
 
 // 🔁 Get current icon
 await ChangeAppIcon.getIcon();
 
 // 🤫 iOS only: silently change icon (if enabled)
-await ChangeAppIcon.changeIconSilently('alternateIcon1');
+await ChangeAppIcon.changeIconSilently('XSquare');
 ```
 
 ---
@@ -152,10 +152,10 @@ Each icon variant should be declared using `<activity-alias>` that points to a c
 
 <!-- Alternate icon alias -->
 <activity-alias
-  android:name=".Christmas"
+  android:name=".XSquare"
   android:enabled="false"
   android:exported="true"
-  android:icon="@mipmap/ic_launcher_christmas"
+  android:icon="@mipmap/ic_launcher_xsquare"
   android:targetActivity=".MainActivity" />
 ```
 
@@ -171,11 +171,11 @@ graph TD
   A[App first install] --> B[MainActivity is default launcher]
   B --> C{User calls getIcon()}
   C -->|No alias enabled| D[Return "MainActivity"]
-  D --> E{User calls changeIcon("CustomIcon1")}
-  E --> F[Enable CustomIcon1]
+  D --> E{User calls changeIcon("XSquare")}
+  E --> F[Enable XSquare]
   F --> G[App goes background]
   G --> H[Disable MainActivity alias, exitProcess(0)]
-  H --> I[App restarts with CustomIcon1]
+  H --> I[App restarts with XSquare]
 
   I --> J{User changes again}
   J --> K[Alias changes immediately]

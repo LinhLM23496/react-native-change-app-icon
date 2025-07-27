@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>ChangeAppIconExample</string>
+	<string>Change Icon</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -26,7 +26,6 @@
 	<true/>
 	<key>NSAppTransportSecurity</key>
 	<dict>
-	  <!-- Do not change NSAllowsArbitraryLoads to true, or you will risk app rejection! -->
 		<key>NSAllowsArbitraryLoads</key>
 		<false/>
 		<key>NSAllowsLocalNetworking</key>
@@ -52,26 +51,32 @@
 	<dict>
 		<key>CFBundleAlternateIcons</key>
 		<dict>
-			<key>AppIcon</key>
+			<key>Default</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
 				<array>
-					<string>AppIcon</string>
+					<string>Default</string>
 				</array>
+				<key>UIPrerenderedIcon</key>
+				<false/>
 			</dict>
-			<key>AppIconCustom2</key>
+			<key>PlusSquare</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
 				<array>
-					<string>AppIconCustom2</string>
+					<string>PlusSquare</string>
 				</array>
+				<key>UIPrerenderedIcon</key>
+				<false/>
 			</dict>
-			<key>AppIconCustom3</key>
+			<key>XSquare</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
 				<array>
-					<string>AppIconCustom3</string>
+					<string>XSquare</string>
 				</array>
+				<key>UIPrerenderedIcon</key>
+				<false/>
 			</dict>
 		</dict>
 	</dict>

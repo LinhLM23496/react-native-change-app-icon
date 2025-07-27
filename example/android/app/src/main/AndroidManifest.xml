@@ -39,7 +39,7 @@
 
       <!-- Custom 2 icon -->
       <activity-alias
-        android:name=".Custom2"
+        android:name=".XSquare"
         android:enabled="false"
         android:exported="true"
         android:icon="@mipmap/ic_launcher_custom2"
@@ -53,7 +53,7 @@
 
       <!-- Custom 3 icon -->
       <activity-alias
-        android:name=".Custom3"
+        android:name=".PlusSquare"
         android:enabled="false"
         android:exported="true"
         android:icon="@mipmap/ic_launcher_custom3"

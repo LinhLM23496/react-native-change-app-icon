@@ -35,14 +35,14 @@ target 'ChangeAppIconExample' do
     )
 
     # ✅ Enable silent icon changing for ChangeAppIcon target
-    # installer.pods_project.targets.each do |target|
-    #   if target.name == 'ChangeAppIcon'
-    #     target.build_configurations.each do |config|
-    #       config.build_settings['SWIFT_ACTIVE_COMPILATION_CONDITIONS'] ||= ['$(inherited)']
-    #       config.build_settings['SWIFT_ACTIVE_COMPILATION_CONDITIONS'] << 'ENABLE_SILENT_ICON_CHANGE'
-    #     end
-    #   end
-    # end
+    installer.pods_project.targets.each do |target|
+      if target.name == 'ChangeAppIcon'
+        target.build_configurations.each do |config|
+          config.build_settings['SWIFT_ACTIVE_COMPILATION_CONDITIONS'] ||= ['$(inherited)']
+          config.build_settings['SWIFT_ACTIVE_COMPILATION_CONDITIONS'] << 'ENABLE_SILENT_ICON_CHANGE'
+        end
+      end
+    end
   end
 end
 

@@ -20,7 +20,8 @@ A React Native library that allows you to **dynamically change your app icon** a
 
 > 🖼️ **Insert GIF demo here**
 >
-> Add a GIF or screenshot showing icon changing in action.
+> 🎬 Demo: [GIF](https://s3.tebi.io/doctruyen/demo-change-app-icon-android.gif)
+> 🎬 Demo: [GIF](https://s3.tebi.io/doctruyen/demo-change-app-icon-Ios.gif)
 
 ---
 
@@ -166,20 +167,9 @@ Each icon variant should be declared using `<activity-alias>` that points to a c
 
 ### 🚦 Android Icon Change Flow
 
-```mermaid
-graph TD
-  A[App first install] --> B[MainActivity is default launcher]
-  B --> C{User calls getIcon()}
-  C -->|No alias enabled| D[Return "MainActivity"]
-  D --> E{User calls changeIcon("XSquare")}
-  E --> F[Enable XSquare]
-  F --> G[App goes background]
-  G --> H[Disable MainActivity alias, exitProcess(0)]
-  H --> I[App restarts with XSquare]
+![App icon flow](
 
-  I --> J{User changes again}
-  J --> K[Alias changes immediately]
-```
+> 🎬 Demo: [IMAGE](https://s3.tebi.io/doctruyen/flow-change-icon-android.png))
 
 ---
 
